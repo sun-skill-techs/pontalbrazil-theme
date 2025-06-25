@@ -1,0 +1,255 @@
+/* Custom Hero Section Styles */
+.custom-hero-section {
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+  border-radius: 15px;
+  margin: 52px;
+}
+
+.custom-hero-section .hero-background-wrapper {
+  position: relative;
+  z-index: 1;
+}
+
+.custom-hero-section .hero-bg-image {
+  position: absolute;
+  z-index: 99;
+  opacity: 1;
+  pointer-events: none;
+}
+
+.custom-hero-section .hero-bg-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.custom-hero-section .banner-row {
+  padding: 60px 40px;
+  padding-bottom: 0;
+}
+
+/* Image Position Classes */
+.custom-hero-section .hero-bg-left {
+  left: -50px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 300px;
+  height: 200px;
+}
+
+.custom-hero-section .hero-bg-right {
+  right: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 572px;
+  height: 371px;
+}
+
+.custom-hero-section .hero-bg-top {
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 400px;
+  height: 150px;
+}
+
+.custom-hero-section .hero-bg-bottom {
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 400px;
+  height: 150px;
+}
+
+.custom-hero-section .hero-bg-center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+  height: 300px;
+}
+
+/* Typography */
+.custom-hero-section .hero-heading {
+  margin-bottom: 0;
+}
+
+.custom-hero-section .hero-description {
+
+}
+
+/* Button Styles */
+.custom-hero-section .hero-btn {
+  background-color: #FCD531;
+  border: none;
+  color: var(--color-primary);
+  font-weight: 600;
+  padding: 16px 24px;
+  border-radius: 52px;
+  text-decoration: none;
+  display: inline-block;
+  transition: all 0.3s ease;
+  font-size: var(--font-size-third-body);
+  margin-bottom: 50px;
+  margin-top: 15px;
+  margin-left: 25px;
+}
+
+.custom-hero-section .hero-btn:hover {
+  background-color: #ffb300;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 193, 7, 0.4);
+  color: #000;
+  text-decoration: none;
+}
+
+/* Utility Classes */
+.custom-hero-section .min-vh-50 {
+  min-height: 50vh;
+}
+
+.custom-hero-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+.custom-hero-section .row {
+  position: relative;
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 768px) {
+  .custom-hero-section {
+    margin: 15px;
+    border-radius: 20px;
+  }
+  
+  .custom-hero-section .banner-row {
+    padding: 40px 25px;
+  }
+  
+  .custom-hero-section .row {
+    flex-direction: column;
+  }
+  
+  .custom-hero-section .col-md-6 {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-bottom: 0;
+  }
+  
+  .custom-hero-section .col-md-6:first-child {
+    order: 1;
+    margin-bottom: 20px;
+  }
+  
+  .custom-hero-section .col-md-6:last-child {
+    order: 2;
+    margin-bottom: 20px;
+  }
+  
+  .custom-hero-section .hero-heading {
+    margin-bottom: 20px;
+    font-size: 24px;
+    line-height: 32px;
+  }
+  
+  .custom-hero-section .hero-description {
+    margin-bottom: 0;
+  }
+  
+  .custom-hero-section .hero-btn {
+    margin-top: 25px;
+    width: 100%;
+    text-align: center;
+    display: block;
+    font-size: 15px;
+  }
+  
+  /* Adjust background images for mobile */
+  .custom-hero-section .hero-bg-image {
+    opacity: 0.7;
+  }
+  
+  .custom-hero-section .hero-bg-left,
+  .custom-hero-section .hero-bg-right {
+    width: 200px;
+    height: 150px;
+  }
+  
+  .custom-hero-section .hero-bg-left {
+    left: -30px;
+    top: 20px;
+    transform: none;
+  }
+  
+  .custom-hero-section .hero-bg-right {
+    right: -30px;
+    bottom: 20px;
+    top: auto;
+    transform: none;
+  }
+  
+  .custom-hero-section .hero-bg-top,
+  .custom-hero-section .hero-bg-bottom {
+    width: 250px;
+    height: 100px;
+  }
+  
+  .custom-hero-section .hero-bg-center {
+    width: 300px;
+    height: 200px;
+  }
+}
+
+@media (max-width: 576px) {
+  .custom-hero-section {
+    margin: 10px;
+    border-radius: 15px;
+  }
+  
+  .custom-hero-section .banner-row {
+    padding: 30px 20px;
+  }
+  
+  .custom-hero-section .hero-btn {
+    padding: 14px 20px;
+    margin-top: 20px;
+  }
+  
+  .custom-hero-section .hero-bg-left,
+  .custom-hero-section .hero-bg-right {
+    width: 150px;
+    height: 120px;
+  }
+  
+  .custom-hero-section .hero-bg-left {
+    left: -20px;
+    top: 10px;
+  }
+  
+  .custom-hero-section .hero-bg-right {
+    right: -20px;
+    bottom: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .custom-hero-section .banner-row {
+    padding: 25px 15px;
+    padding-bottom: 0;
+  }
+  
+  .custom-hero-section .hero-heading {
+    margin-bottom: 0px;
+  }
+  
+  .custom-hero-section .hero-btn {
+    margin-top: 10px;
+        padding: 12px 18px;
+        margin-left: 0;
+        margin-bottom: 0;
+  }
+}

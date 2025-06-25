@@ -1,0 +1,99 @@
+.contact img {
+  max-width: 100%;
+}
+
+.contact .form__message {
+  align-items: flex-start;
+}
+
+.contact .icon-success {
+  margin-top: 0.2rem;
+}
+
+.contact .field {
+  margin-bottom: 1.5rem;
+}
+
+@media screen and (min-width: 750px) {
+  .contact .field, .field2 {
+    margin-bottom: 2rem;
+  }
+}
+
+.contact__button {
+  margin-top: 3rem;
+}
+
+@media screen and (min-width: 750px) {
+  .contact__button {
+    margin-top: 4rem;
+  }
+}
+
+@media screen and (min-width: 750px) {
+  .contact__fields {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 2rem;
+  }
+}
+
+.grecaptcha-badge {
+  visibility: hidden;
+}
+
+.contact svg {
+  width: 50px;
+  margin-right: 10px;
+}
+
+.contact .icon-text-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.contact .whatsapp-link {
+  display: block;
+  display: flex;
+  align-items: center;
+}
+
+.contact > .whatsapp-link-wrapper {
+  display: inline-block;
+}
+
+.contact > .whatsapp-link-wrapper a {
+  background-color: rgb(var(--color-button));
+  color: white;
+  display: flex;
+  font-weight: 600;
+  margin-bottom: 30px;
+  max-width: auto;
+  padding: 10px;
+  text-decoration: none;
+  width: auto;
+}
+
+/* New contact detail section */
+.field__label2 {
+  color: #333;
+}
+.field__input2 {
+  width: 100%;
+  min-height: 55px;
+  border: 1px solid #ECEEF0;
+  padding: 15px;
+  margin-top:5px;
+  color:#757575;
+}
+#ContactFormProductNameField {
+ height:50px !important;
+  border:1px solid #ECEEF0;
+  background:white;
+}
+textarea.text-area.field__input2 {
+  max-height:150px;
+}
+.contact__button2 {
+  text-align: right;
+}

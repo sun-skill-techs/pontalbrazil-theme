@@ -1,0 +1,119 @@
+<link rel="stylesheet" href="{{ "sst-hero-banner.css" | asset_url }}">
+{%- liquid
+  assign bg_color = section.settings.background_color | default: '#2c4a87'
+  assign image_position = section.settings.image_position | default: 'left'
+  assign heading = section.settings.heading
+  assign description = section.settings.description
+  assign button_text = section.settings.button_text
+  assign button_url = section.settings.button_url
+  assign section_image = section.settings.section_image
+-%}
+
+<section class="custom-hero-section" style="background-color: {{ bg_color }};">
+  <div class="hero-background-wrapper position-relative">
+    {% if section_image %}
+      <div class="hero-bg-image hero-bg-{{ image_position }}">
+        <img src="{{ section_image | img_url: 'master' }}" alt="Background decoration" class="img-fluid">
+      </div>
+    {% endif %}
+    
+    <div class="container">
+      <div class="row align-items-flex-start banner-row">
+        <div class="col-md-6">
+          {% if heading != blank %}
+            <h1 class="hero-heading bottom-heading text-white">{{ heading }}</h1>
+          {% endif %}
+                   
+        </div>
+        <div class="col-md-6">
+          {% if description != blank %}
+            <p class="hero-description secondary-text text-white">{{ description }}</p>
+          {% endif %}
+
+        </div>
+      </div>
+      <div class="row p-0 m-0">
+        <div class="col-12 pb-5 pb-md-0">
+{% if button_text != blank and button_url != blank %}
+            <a href="{{ button_url }}" class="btn btn-warning hero-btn">{{ button_text }}</a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Custom Hero Banner",
+  "settings": [
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Background Color",
+      "default": "#2c4a87"
+    },
+    {
+      "type": "image_picker",
+      "id": "section_image",
+      "label": "Background Image"
+    },
+    {
+      "type": "select",
+      "id": "image_position",
+      "label": "Image Position",
+      "options": [
+        {
+          "value": "left",
+          "label": "Left"
+        },
+        {
+          "value": "right",
+          "label": "Right"
+        },
+        {
+          "value": "top",
+          "label": "Top"
+        },
+        {
+          "value": "bottom",
+          "label": "Bottom"
+        },
+        {
+          "value": "center",
+          "label": "Center"
+        }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Your Brazilian Documents — Solved in Days, Not Months!"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "Skip the consulate queues and paperwork headaches. Get expert help with passports, VISAs, and legal documents - all from the comfort of your home. Limited spots available!"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Get Started Now - 50% Off First Order!"
+    },
+    {
+      "type": "url",
+      "id": "button_url",
+      "label": "Button URL"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Hero Banner"
+    }
+  ]
+}
+{% endschema %}

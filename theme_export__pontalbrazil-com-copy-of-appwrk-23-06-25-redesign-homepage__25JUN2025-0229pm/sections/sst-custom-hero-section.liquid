@@ -1,0 +1,116 @@
+<link rel="stylesheet" href="{{ "sst-custom-hero-section.css" |  asset_url }}">
+<section class="sst-hero-stats-section">
+  <div class="container">
+    <div class="row align-items-center sst-hero-row">
+      <div class="col-lg-6 col-md-7">
+        <h1 class="primary-heading mb-3 sst-hero-title">{{ section.settings.title }}</h1>
+        <p class="accent-text mb-4 sst-hero-description">{{ section.settings.description }}</p>
+       <div class="sst-hero-stats-btn"> 
+         <a href="{{ section.settings.button_link }}" class="btn-twist btn-cta sst-btn-cta">{{ section.settings.button_text }}</a>
+       </div>
+      </div>
+      <div class="col-lg-6 col-md-5 text-center text-md-end sst-map-container">
+        <div class="sst-map-graphic">
+          <img src="{{ section.settings.map_image | img_url: 'master' }}" alt="Brazil Map" class="img-fluid" />
+        </div>
+      </div>
+    </div>
+    
+    <div class="sst-stats-wrapper">
+      <div class="row g-4">
+        {% for block in section.blocks %}
+          <div class="col-md-4 col-sm-4 col-4 sst-stat-col">
+            <div class="sst-stat-item text-center">
+              <h2 class="sst-stat-number primary-heading mb-2">{{ block.settings.number }}</h2>
+              <p class="sst-stat-description second-text-body mb-0">{{ block.settings.description }}</p>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Hero with Stats",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Ajudamos você a resolver documentos e processos nos EUA com tranquilidade"
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "Traduções, consulado, DMV, passaporte, vistos e mais — tudo em um só lugar."
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Fale conosco"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "image_picker",
+      "id": "map_image",
+      "label": "Map Image"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "stat",
+      "name": "Statistic",
+      "settings": [
+        {
+          "type": "text",
+          "id": "number",
+          "label": "Statistic Number",
+          "default": "110+"
+        },
+        {
+          "type": "text",
+          "id": "description",
+          "label": "Statistic Description",
+          "default": "Certified Translations Delivered in 2023"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hero with Stats",
+      "blocks": [
+        {
+          "type": "stat",
+          "settings": {
+            "number": "110+",
+            "description": "Certified Translations Delivered in 2023"
+          }
+        },
+        {
+          "type": "stat",
+          "settings": {
+            "number": "1,200+",
+            "description": "Brazilian IDs Issued Last Year"
+          }
+        },
+        {
+          "type": "stat",
+          "settings": {
+            "number": "100%",
+            "description": "Acceptance Guarantee in Brazil & U.S."
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

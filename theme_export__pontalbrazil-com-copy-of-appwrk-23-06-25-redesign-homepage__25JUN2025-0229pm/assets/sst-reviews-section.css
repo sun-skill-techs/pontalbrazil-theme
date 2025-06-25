@@ -1,0 +1,283 @@
+/* SST Reviews Section Styles - Parent class added to prevent conflicts */
+.sst-reviews-section {
+  padding-top: 60px;
+  background-color: #ffffff;
+  overflow: hidden;
+  position: relative;
+}
+
+.sst-reviews-section .sst-section-title {
+  margin-bottom: 60px;
+  position: relative;
+}
+
+/* Reviews Row Container */
+.sst-reviews-section .sst-reviews-row {
+  position: relative;
+  overflow: hidden;
+  margin: 0 -50px;
+  padding: 0 50px;
+}
+
+/* Slick Slider Container */
+.sst-reviews-section .sst-reviews-slider {
+  margin: 0;
+}
+
+.sst-reviews-section .sst-reviews-slider .slick-list {
+  overflow: hidden;
+}
+
+.sst-reviews-section .sst-reviews-slider .slick-track {
+  display: flex;
+  align-items: stretch;
+}
+
+.sst-reviews-section .sst-reviews-slider .slick-slide {
+  padding: 0 12px;
+  height: auto;
+}
+
+/* Review Card Styles */
+.sst-reviews-section .sst-review-item {
+  outline: none;
+  height: 100%;
+}
+
+.sst-reviews-section .sst-review-card {
+  background: #fff;
+  border-radius: 0px;
+  padding: 24px;
+  height: 100%;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0px 7px 31.8px 0px #9FA2B433;
+}
+
+.sst-reviews-section .sst-review-card:hover {
+  transform: translateY(-3px);
+  background-color: #f0f2f5;
+}
+
+/* Review Header */
+.sst-reviews-section .sst-review-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.sst-reviews-section .sst-reviewer-avatar {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 12px;
+  flex-shrink: 0;
+}
+
+.sst-reviews-section .sst-reviewer-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.sst-reviews-section .sst-reviewer-name {
+  font-size: var(--font-size-third-body);
+  font-weight: 700;
+  color: #0E1320;
+  margin: 0 0 4px 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.sst-reviews-section .sst-reviewer-location {
+  font-size: var(--font-size-four-body);
+  color: #717A79;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Review Content */
+.sst-reviews-section .sst-review-content {
+  position: relative;
+  flex: 1;
+}
+
+.sst-reviews-section .sst-review-text {
+  font-size: var(--font-size-four-body);
+  line-height: var(--line-height-body);
+  color: #717A79;
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Hide dots and arrows */
+.sst-reviews-section .sst-reviews-slider .slick-dots {
+  display: none !important;
+}
+
+.sst-reviews-section .sst-reviews-slider .slick-arrow {
+  display: none !important;
+}
+
+/* Fade effect on edges */
+.sst-reviews-section .sst-reviews-row::before,
+.sst-reviews-section .sst-reviews-row::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 120px;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.sst-reviews-section .sst-reviews-row::before {
+  left: 0;
+  background: linear-gradient(to right, #ffffff 0%, transparent 100%);
+}
+
+.sst-reviews-section .sst-reviews-row::after {
+  right: 0;
+  background: linear-gradient(to left, #ffffff 0%, transparent 100%);
+}
+
+/* Ensure equal heights */
+.sst-reviews-section .slick-slide > div {
+  height: 100%;
+}
+
+/* Direction Control - Normal (Right to Left - Default) */
+.sst-reviews-section .sst-slider-normal .slick-track {
+  animation-direction: normal;
+}
+
+/* Direction Control - Reverse (Left to Right) */
+.sst-reviews-section .sst-slider-reverse .slick-track,
+.sst-reviews-section .sst-reverse-animation {
+  animation-direction: reverse !important;
+}
+
+/* Custom animation keyframes for better control */
+@keyframes sst-scroll-normal {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes sst-scroll-reverse {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Apply animations based on direction */
+.sst-reviews-section .sst-slider-normal.slick-initialized .slick-track {
+  animation: sst-scroll-normal 40s linear infinite;
+}
+
+.sst-reviews-section .sst-slider-reverse.slick-initialized .slick-track {
+  animation: sst-scroll-reverse 40s linear infinite;
+}
+
+/* Responsive Styles */
+@media (max-width: 1399px) {
+  .sst-reviews-section .sst-review-card {
+    padding: 20px;
+  }
+  
+  .sst-reviews-section .sst-section-title {
+    font-size: 36px;
+  }
+}
+
+@media (max-width: 991px) {
+  .sst-reviews-section .sst-section-title {
+    font-size: 32px;
+    margin-bottom: 40px;
+  }
+  
+  .sst-reviews-section .sst-review-card {
+    min-height: 180px;
+  }
+  
+  .sst-reviews-section .sst-reviews-row {
+    margin: 0 -30px;
+    padding: 0 30px;
+  }
+  
+  .sst-reviews-section .sst-reviews-row::before,
+  .sst-reviews-section .sst-reviews-row::after {
+    width: 80px;
+  }
+}
+
+@media (max-width: 575px) {
+  .sst-reviews-section{
+    padding: 0 15px;
+  }
+  .sst-reviews-section .sst-section-title {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+  
+  .sst-reviews-section {
+    padding: 60px 0;
+  }
+  
+  .sst-reviews-section .sst-review-card {
+    padding: 18px;
+    min-height: 160px;
+  }
+  
+  .sst-reviews-section .sst-reviewer-avatar {
+    width: 45px;
+    height: 45px;
+  }
+  
+  .sst-reviews-section .sst-reviewer-name {
+    font-size: 15px;
+  }
+  
+  .sst-reviews-section .sst-reviewer-location {
+    font-size: 12px;
+  }
+  
+  .sst-reviews-section .sst-review-text {
+    font-size: 13px;
+    -webkit-line-clamp: 3;
+  }
+  
+  .sst-reviews-section .sst-reviews-row {
+    margin: 0 -20px;
+    padding: 0 20px;
+  }
+  
+  .sst-reviews-section .sst-reviews-row::before,
+  .sst-reviews-section .sst-reviews-row::after {
+    width: 50px;
+  }
+}
+
+/* Fallback for browsers without animation support */
+.no-js .sst-reviews-section .sst-slider-normal .slick-track {
+  animation: sst-scroll-normal 40s linear infinite;
+}
+
+.no-js .sst-reviews-section .sst-slider-reverse .slick-track {
+  animation: sst-scroll-reverse 40s linear infinite;
+}
