@@ -1,0 +1,100 @@
+<style>
+  .collections-wrapper {
+    display: flex;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 25px;
+    row-gap: 25px;
+    flex-wrap: wrap;
+  }
+
+  .collection-item {
+    display: flex;
+    height: 200px;
+    background-size: cover;
+    color: rgb(var(--color-button-text));
+    font: inherit;
+    font-size: 28px;
+    text-decoration: none;
+    min-width: 31%;
+    flex: 1;
+  }
+
+  .collection-item span {
+    margin: auto;
+    text-align: center;
+  }
+
+  @media screen and (max-width: 749px) {
+    .collections-wrapper {
+      grid-template-columns: repeat(2, 1fr);
+      column-gap: 10px;
+      row-gap: 10px;
+    }
+
+    .collection-item {
+      height: 80px;
+      font-size: 16px;
+    }
+  }
+  @media (max-width: 989px) {
+  .collection-item {
+    min-width: 48%;
+  }
+  }
+</style>
+
+<div class="page-width">
+  <h1>
+    <!-- {{ 'sections.categories_list.title' | t }} -->
+    {{ section.settings.Categories_title }}
+  </h1>
+
+  <div class="collections-wrapper">
+    {% for block in section.blocks %}
+      <a
+        class="collection-item"
+        href="{{ block.settings.collection.url }}"
+        style="{% if  block.settings.collection_image != blank %}background-image: url({{ block.settings.collection_image | img_url : '480X' }}){% elsif block.settings.collection.image %}background-image: url({{ block.settings.collection.image | img_url : '480X' }}){% else %} background-color: #1e306e {% endif %};"
+      >
+        <span>{{ block.settings.collection.title }}</span>
+      </a>
+    {% endfor %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Collection Tiles",
+  "settings": [
+    {
+    "type": "text",
+    "id": "Categories_title",
+    "label": "Collection Title",
+    "default": "Categories"
+  }
+  ],
+  "blocks":[
+      {
+        "name": "Categorie",
+        "type":"collection",
+        "settings": [
+          {
+              "id":"collection",
+              "type":"collection",
+              "label":"collection"
+          },
+          {
+            "type":"image_picker",
+            "id":"collection_image",
+            "label":"Custom Collection Image"
+          }
+        ]
+      }
+  ],
+   "presets": [
+          {
+            "name": "t:sections.categories_list.title"
+          }
+   ]
+}
+{% endschema %}

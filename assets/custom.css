@@ -1,0 +1,418 @@
+html {
+  scroll-behavior: smooth;
+}
+.service_subtext{
+    color:#fff;
+    font-size:16px;
+    letter-spacing: 0.5px;
+  }
+.service-button-link .button{
+    background-color:#0FAA4E !important;
+  border-radius:0px;
+  }
+p.banner__subheading {
+    color: #fff;
+}
+p.banner__subheading span{
+    background-color: #0FAA4E;
+}
+.service-section .banner__box {
+    max-width:700px;
+    margin-left:0px;
+}
+.service-section .banner__content{
+    justify-content:start!important;
+}
+  .service-section .banner__heading{
+     font-size:54px;
+    font-weight:500;
+  }  
+  .service-why-choose-section .banner__heading{
+     font-size:40px;
+  }
+  .service-why-choose-section .image_block{
+    text-align:right;
+    margin-right:18%;
+  }
+  .service-why-choose-section .image_block img {
+    max-height: 95px;
+    margin-bottom: -65px;
+}
+  .service-button-link .button{
+    background-color:#0FAA4E !important;
+  }
+  p.banner__subheading {
+    color: #fff;
+}
+p.banner__subheading span{
+    background-color: #0FAA4E;
+}
+  .service-why-choose-section .banner__box {
+    max-width:60%;
+    margin-left:0px;
+    padding-left:0px;
+}
+.service-why-choose-section .banner__content{
+    justify-content:start!important;
+}
+.wc_mainwrap {
+    display: grid;
+    grid-template-columns: auto 40%;
+}
+.wc_mainwrap .why_choose_inner {
+    display: grid;
+    gap:30px;
+    grid-template-columns: 50% auto;
+}
+.wc_mainwrap .why_choose_inner .why_choose_item {
+    display: grid;
+    grid-template-columns: 60px auto;
+}
+.wc_mainwrap .why_choose_inner .why_choose_item img {
+    width: 40px;
+}
+.our_servic .multicolumn-card__info {
+    padding: 0!important;
+}
+.our_servic .multicolumn-card__image-wrapper {
+    width: 100%;
+    margin: 0!important;
+}
+.our_servic .multicolumn-card__image-wrapper img{
+    width: 100%;
+    height: auto;
+}
+.about-custom-section .image-with-text__content {
+    padding-right: 0;
+}
+.about-custom-section .image-with-text__media {
+    border: 0;
+}
+.about-custom-section .image-with-text__media img {
+    height: auto!important;
+    top: 50%!important;
+    transform: translateY(-50%);
+}
+.our_servic .subtitle .green_bg, .service-why-choose-section .banner__subheading span, .about-custom-section .About-subheading span, .get_started .subtitle span, .service-section .banner__subheading span {
+    background: #0faa4e;
+    padding-left: 5px;
+}
+.our_servic .subtitle, .service-why-choose-section .banner__subheading, .about-custom-section .About-subheading, .get_started .subtitle, .service-section .banner__subheading {
+    margin: 0!important;
+    font-size: 17px;
+    position: relative;
+
+}
+ .get_started .subtitle{
+   color:#1e306e;
+ }  
+.our_servic .title, .about-custom-section .about-heading, .get_started .title, .form_section .form-section_wrap .form_title {
+    font-size: 30px;
+}
+.our_servic .multicolumn-card {
+    border:  1px solid #EDEDED;
+    background: #FFF;
+    height: 100%;
+}
+
+.our_servic .multicolumn-card__info {
+    padding:20px 20px 25px!important;
+    display: block;
+}
+.edit_icon {
+    background: #fff;
+    filter: drop-shadow(0px 0px 17.6px rgba(0, 0, 0, 0.07));
+    width: 80px;
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 80px;
+    border-radius: 100%;
+    margin-top: -50px;
+}
+.our_servic .multicolumn-card__info h3 a {
+    font-size: 17px;
+    text-decoration: none;
+    color: #1e306e;
+    letter-spacing: 0px;
+}
+.our_servic .multicolumn-card__info .rte p {
+    font-size: 15px;
+    letter-spacing: 0.5px;
+}
+.our_servic .multicolumn-list {
+    gap: 25px;
+    display: grid;
+    grid-template-columns: auto auto auto;
+}
+.our_servic .multicolumn-list  .grid__item{
+    width:100%;
+    max-width:unset;
+}
+.why_with_form h4 {
+    margin-top: 0;
+    font-size: 17px;
+    margin-bottom: 8px;
+}
+.why_with_form p {
+    font-size: 15px;
+    letter-spacing: 0.5px;
+    margin: 0;
+    line-height: 1.6;
+}
+.why_with_form {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.service_form .field {
+    margin-bottom: 20px;
+}
+.service_form  .button {
+    width: 100%;
+}
+.form_section .form-section_wrap {
+    padding: 40px 30px;
+    background: #fff;
+    margin-top: -75%;
+    z-index: 2;
+    position: relative;
+  box-shadow: 0px 0px 109.6px 0px rgba(0, 0, 0, 0.08);
+}
+.form_section {
+    padding-left: 50px;
+}
+.form_section .form-section_wrap .form_title {
+    margin-top: 0;
+}
+.form_section .form-section_wrap textarea, .form_section .form-section_wrap input {
+    content: none;
+    background: #F4F4F4;
+}
+.service_form .field:before, .service_form .field:after {
+    content: none;
+}
+.form_section .form-section_wrap textarea:focus, .form_section .form-section_wrap input:focus {
+    box-shadow: none;
+}
+.form_section .form-section_wrap textarea {
+    height: 130px;
+}
+.about-custom-section .about-text {
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+}
+.get_started .rte {
+    line-height: 1.6;
+    letter-spacing: 0.5px;
+    margin-top: 15px;
+}
+.get_started  .title-wrapper-with-link {
+    margin: 0;
+}
+.get_started .get_start_wrap {
+  display: grid;
+    grid-template-columns: 70% auto;
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 50px;
+    background: #FFF;
+    box-shadow: 0px 0px 92.8px 0px rgba(0, 0, 0, 0.04);
+}
+.gt_btn_wrap {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+}
+.gt_btn_wrap .button {
+    color: #fff;
+    margin: 0!important;
+}
+.ctm_Our_Service .footer {
+    margin: 0;
+    padding-top: 60px;
+}
+.get_started .gradient {
+    background: rgb(255,255,255);
+    background: linear-gradient(180deg, rgba(255,255,255,1) 50%, rgba(250,250,250,1) 50%);
+}
+.contact.service_form iframe {
+    max-height: 435px!important;
+}
+.get_started .get_start_wrap {
+    position: relative;
+}
+
+.get_started .get_start_wrap:before {
+    content: '';
+    height: 150px;
+    width: 240px;
+    position: absolute;
+    background-size: contain;
+    background-image: url(https://cdn.shopify.com/s/files/1/0497/8245/6481/files/Fly_animation.webp?v=1706875889);
+    background-repeat: no-repeat;
+    left: 50%;
+}
+.get_started .title {
+    max-width: 450px;
+}
+
+.about-custom-section .experience_caption {
+    top: 47%!important;
+    left: 70%!important;
+    transform: translate(-50%, -50%);
+    background: #1F316E;
+    height: auto!important;
+    width: 230px!important;
+    color: #fff;
+    padding: 15px 20px;
+}
+.about-custom-section .experience_caption h5 {
+    font-size: 36px;
+    line-height: 1.2;
+    font-weight: 600;
+    color: #fff;
+    margin: 0;
+}
+.about-custom-section .experience_caption p {
+    margin: 0;
+    font-size: 17px;
+}
+.about-custom-section .experience_caption:before {
+    content: '';
+    width: 25px;
+    height: 25px;
+    background-image: url(https://cdn.shopify.com/s/files/1/0497/8245/6481/files/Polygon_1.png);
+    position: absolute;
+    left: -20px;
+    bottom: 15px;
+    background-size: contain;
+}
+
+
+@media only screen and (min-width:750px){
+  .service-section .banner--large:not(.banner--adapt) {
+    min-height: calc(100vh - 120px);
+}
+}
+
+@media only screen and (max-width:749px){
+  .get_started .get_start_wrap:before{
+    display:none;
+  }
+  .get_started .title {
+    max-width: 100%;
+}
+  .our_servic .multicolumn-list {
+    grid-template-columns: 100%;
+}
+.service-why-choose-section .banner__box {
+    max-width: 100%;
+}
+.form_section .form-section_wrap {
+    margin-top: 0;
+}
+.form_section {
+    padding: 0;
+    padding-top: 40px;
+}
+.wc_mainwrap {
+    grid-template-columns: 100%;
+}
+.about-custom-section .image-with-text__content {
+    padding-left: 0;
+    padding-bottom: 0;
+}
+  .get_started .get_start_wrap {
+    grid-template-columns: 100%;
+    padding: 30px 20px;
+    margin: 0px 15px;
+}
+.gt_btn_wrap {
+    justify-content: center;
+}
+.gt_btn_wrap .button {
+    margin: 0;
+}
+.get_started .title-wrapper-with-link {
+    text-align: center;
+  padding:0px;
+}  
+.service-section .banner__content {
+    justify-content: center!important;
+}
+.service-section p.banner__subheading, .service-section .banner__heading, .service-section .service_subtext {
+    color: #1e306e;
+}
+  .our_servic .title, .about-custom-section .about-heading, .get_started .title, .form_section .form-section_wrap .form_title {
+    font-size: 26px;
+}
+.our_servic .subtitle, .service-why-choose-section .banner__subheading, .about-custom-section .About-subheading, .get_started .subtitle, .service-section .banner__subheading {
+    font-size: 16px;
+}
+.service-section .banner__heading {
+    font-size: 36px;
+}
+.service-section .banner__box {
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    margin-top: -50px;
+    background: #fff;
+}
+  .service-why-choose-section .banner__box {
+    margin-left: 10px;
+    padding-left: 15px;
+}
+.service-why-choose-section .banner__heading {
+    font-size: 30px;
+}
+  .service-button-link .button {
+    font-size: 1.7rem!important;
+    padding: 0 30px;
+}
+  .about-custom-section .experience_caption {
+    top: 44%!important;
+    left: 65%!important;
+    transform: translate(-50%, -50%);
+    background: #1F316E;
+    height: auto!important;
+    width: 150px!important;
+    color: #fff;
+    padding: 15px 20px;
+}
+.about-custom-section .experience_caption h5 {
+    font-size: 20px;
+    line-height: 1.2;
+    font-weight: 600;
+    color: #fff;
+    margin: 0;
+}
+.about-custom-section .experience_caption p {
+    margin: 0;
+    font-size: 14px;
+}
+.about-custom-section .experience_caption:before {
+    content: '';
+    width: 25px;
+    height: 25px;
+    background-image: url(https://cdn.shopify.com/s/files/1/0497/8245/6481/files/Polygon_1.png);
+    position: absolute;
+    left: -20px;
+    bottom: 15px;
+    background-size: contain;
+}
+
+}
+@media only screen and (max-width:540px){
+.wc_mainwrap .why_choose_inner {
+    grid-template-columns: 100%;
+}
+}
+@media only screen and (max-width:400px){
+.contact.service_form iframe {
+    max-height: 435px!important;
+}
+}

@@ -1,0 +1,121 @@
+{{ 'review.css' | asset_url | stylesheet_tag }}
+<div class="review_sec" style="background:{{ section.settings.bg_color }};">
+  <div class="page-width">
+    {% if section.settings.main_heading != blank %}
+    <div class="heading_wrap">
+      <h2 class="heading-h2" style="color:{{ section.settings.heading_color }};">{{ section.settings.main_heading}}</h2>
+    </div>
+    {% endif %}
+    <div class="our_reviews">
+       {% for block in section.blocks %}
+          <div class="our_reviews_wrap">
+            <div class="reviews_inner_wrap">
+             <div class="star-rating">
+               <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span> 
+               <div class="star-rating__current" style="width:{{ block.settings.rating }}">
+                 <span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+               </div>
+             </div>
+             <h4>{{ block.settings.review_name }}</h4>
+             <p>{{ block.settings.review_content }}</p>
+            </div>
+          </div>
+        {% endfor %}
+     </div>
+    <div class="see_all_wrap">
+    <a class="see_all_link" target="_blank" href="{{ section.settings.see_all_link }}" style="color:{{ section.settings.link_color }};">{{ section.settings.see_all_text }}</a>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+  {
+    "name": "Our customers say",
+    "class":"our_customers_main", 
+    "max_blocks": 3,
+    "settings": [
+      {
+        "id":"bg_color",
+        "type":"color",
+        "label":"Background Color"
+      },
+      {
+        "id":"main_heading",
+        "type":"text",
+        "label":"Main Heading"
+      },
+      {
+        "id":"heading_color",
+        "type":"color",
+        "label":"Heading Color"
+      },
+      {
+        "id":"see_all_link",
+        "type":"url",
+        "label":"See all link"
+      },
+      {
+        "id":"see_all_text",
+        "type":"text",
+        "label":"See all text"
+      },
+      {
+        "id":"link_color",
+        "type":"color",
+        "label":"Link Color"
+      }
+    ],
+    "blocks":[
+      {
+      "name":"Review",
+      "type":"Review",
+      "settings":[
+        {
+          "id":"rating",
+          "type":"select",
+          "default":"100%",
+          "label":"Star Rating",
+          "options":[
+            {
+              "label":"1 Star",
+              "value":"20%"
+            },
+            {
+              "label":"2 Star",
+              "value":"40%"
+            },
+            {
+              "label":"3 Star",
+              "value":"60%"
+            },
+            {
+              "label":"4 Star",
+              "value":"80%"
+            },
+            {
+              "label":"5 Star",
+              "value":"100%"
+            }
+          ]
+        },
+            {
+              "id":"review_name",
+              "type":"text",
+              "label":"Name"
+            },
+             {
+              "id":"review_content",
+              "type":"textarea",
+              "label":"Content"
+            }
+      ]
+      }
+    ],
+    "presets":[
+      {
+      "name":"Our customers say",
+      "category":"custom"
+      }
+    ]
+  }
+{% endschema %}
